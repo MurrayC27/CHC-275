@@ -5,5 +5,5 @@ odd = []
 file = open("number.txt","r")
 buffer = file.readlines()
 file.close()
-even.append(buffer[1])
-print(even)
+even.append(buffer[2])
+even.append(buffer[4])
