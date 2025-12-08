@@ -1,9 +1,5 @@
 Check = False
 import random
-red = []
-black = []
-even = []
-odd = []
 file = open("number.txt","r")
 wheel = file.readlines()
 print (wheel)
@@ -17,7 +13,10 @@ while Check == False:
     x = input("how would you like to bet? ").strip().lower()
     randomnumber = random.sample(wheel,1)[0].split(":")
     print(randomnumber)
+    randomnumber[1] = randomnumber[1].replace("/n","")
     if x == randomnumber[1]:
         print("you win!!!")
-    if x == randomnumber[0]:
+    elif x == randomnumber[0]:
         print("you win!!!")
+    else:
+        print("you lose :( ")
